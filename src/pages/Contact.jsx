@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 
 const Contact = () => {
@@ -87,7 +87,7 @@ const Contact = () => {
         </Form.Item> */}
 
         <Form.Item label={null}>
-          <Button className="w-full p-5 text-xl" type="primary" htmlType="submit">
+          <Button className="w-full p-5 text-xl font-medium" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

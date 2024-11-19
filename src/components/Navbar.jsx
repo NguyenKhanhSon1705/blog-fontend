@@ -73,11 +73,12 @@ const Navbar = () => {
       <div
         className={`${
           show ? "block" : "hidden"
-        } flex flex-col fixed text-center py-3 top-0 left-0 z-10 bg-[#909090] bg-opacity-90 text-white w-full h-screen md:hidden`}
+        } flex flex-col fixed text-center py-3 top-0 left-0 z-10 bg-[#909090] bg-opacity-99 text-white w-full h-screen md:hidden`}
       >
         {menu.length > 0 &&
           menu.map((item, index) => (
             <NavLink
+              onClick={() => setShow(false)}
               className={({ isActive }) =>
                 isActive ? "text-blue-500" : "text-white"
               }

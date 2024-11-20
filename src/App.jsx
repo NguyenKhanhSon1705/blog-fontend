@@ -1,23 +1,32 @@
-import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import Main from './layouts/Main'
-import Home from './pages/Home'
-import Contact from './pages/Contact'
-import PostDetails from './pages/PostDetails'
+import { RouterProvider } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import router from "./routes";
 
 function App() {
-
+  console.log(1234);
+  
   return (
     <>
-     <Routes>
-        <Route path='/' element={<Main/>} >
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/contact' element={<Contact/>}></Route>
-            <Route path='/post/:slug' element={<PostDetails/>}></Route>
-        </Route>
-     </Routes>
+    
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <RouterProvider
+      future={{
+        v7_startTransition: true,
+      }}
+      router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

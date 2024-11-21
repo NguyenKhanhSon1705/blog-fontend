@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import PostDetails from "../pages/PostDetails";
 import Main from "../layouts/Main";
+import SearchPage from "../pages/SearchPage";
 
 const router = createBrowserRouter(
   [
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
             {path:'/', element:<Home/>},
             {path:'/contact', element:<Contact/>},
             {path:'/post/:slug', element:<PostDetails/>},
+            {path:'/search', element:<SearchPage/>},
         ]
     },
 

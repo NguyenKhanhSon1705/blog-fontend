@@ -7,7 +7,7 @@ import PostComment from "../components/PostComment";
 
 const PostDetails = () => {
   return (
-    <div className="w-full max-w-[1200px] mx-auto my-3 lg:my-32 p-5 lg:p-0">
+    <div className="w-full max-w-[1200px] mx-auto my-3 lg:my-20 xl:my-32 p-5 lg:p-6 xl:p-0">
       <div className="flex flex-row gap-2 items-center mb-3 text-gray-500">
         <span className="font-medium">Innovation</span>
         <span className="font-medium">2 Hours ago</span>
@@ -51,8 +51,8 @@ const PostDetails = () => {
         />
       </div>
 
-      <div className="flex flex-col mt-14 w-full max-w-[1000px]">
-        <p className="text-md lg:text-lg">
+      <div className="flex flex-col mt-14 w-full">
+        <p className="text-md lg:text-lg text-justify">
           Leverage agile frameworks to provide a robust synopsis for high level
           overviews. Iterative approaches to corporate strategy foster
           collaborative thinking to further the overall value proposition.
@@ -80,7 +80,7 @@ const PostDetails = () => {
           DevOps. Nanotechnology immersion along the information
         </p>
         <br />
-        <p className="text-md lg:text-lg">
+        <p className="text-md lg:text-lg text-justify">
           Leverage agile frameworks to provide a robust synopsis for high level
           overviews. Iterative approaches to corporate strategy foster
           collaborative thinking to further the overall value proposition.
@@ -96,7 +96,7 @@ const PostDetails = () => {
         </p>
 
         <br />
-        <p className="text-md lg:text-lg">
+        <p className="text-md lg:text-lg text-justify">
           Leverage agile frameworks to provide a robust synopsis for high level
           overviews. Iterative approaches to corporate strategy foster
           collaborative thinking to further the overall value proposition.

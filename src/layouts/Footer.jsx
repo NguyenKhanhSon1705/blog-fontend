@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import LOGO from "../assets/logo.png";
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="flex p-2 flex-col md:flex-row gap-12 lg:p-2 xl:p-0">
         <div className="flex flex-col gap-1 w-full">
           <img className="h-[150px] object-contain" src={LOGO} alt="" />
-          <p className="text-center md:text-start">
+          <p className="md:text-start text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod.

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import LOGO from "../assets/logo.png";
@@ -13,29 +14,61 @@ const Navbar = () => {
     },
     {
       title: "Feature",
-      to: "/Feature",
+      to: "/feature",
     },
     {
       title: "Shop",
-      to: "/Shop",
+      to: "/shop",
     },
     {
       title: "Gallery",
-      to: "/Gallery",
+      to: "/gallery",
     },
     {
       title: "Blog",
-      to: "/Blog",
+      to: "/blog",
     },
     {
       title: "About",
-      to: "/About",
+      to: "/bbout",
     },
     {
       title: "Contact",
-      to: "/Contact",
+      to: "/contact",
     },
   ]);
+
+  const [menuMobile,setMenuMobile] = useState([
+    {
+      title: "Home",
+      to: "/",
+    },
+    {
+      title: "Search",
+      to: "/search",
+    },
+    {
+      title: "Shop",
+      to: "/shop",
+    },
+    {
+      title: "Gallery",
+      to: "/gallery",
+    },
+    {
+      title: "Blog",
+      to: "/blog",
+    },
+    {
+      title: "About",
+      to: "/bbout",
+    },
+    {
+      title: "Contact",
+      to: "/contact",
+    },
+  ])
+
   return (
     <div className="w-full max-w-[1200px] mx-auto flex justify-between items-center">
       <Link className="w-[100px] h-[100px]" to={"/"}>
@@ -51,7 +84,7 @@ const Navbar = () => {
               }
               to={item.to}
               key={index}
-              style={{ padding: "8px", fontSize:'20px' }}
+              style={{ padding: "8px", fontSize: "20px" }}
             >
               {item.title}
             </NavLink>
@@ -67,16 +100,17 @@ const Navbar = () => {
 
       {/* Icon Search */}
 
-      <CiSearch className="md:block md:w-8 md:h-8 md:cursor-pointer hidden text-white" />
-
+      <NavLink className={'hidden md:block'} to={'/search'}>
+        <CiSearch className="md:w-8 md:h-8 md:cursor-pointer text-white" />
+      </NavLink>
       {/* Menu Mobile */}
       <div
         className={`${
           show ? "block" : "hidden"
         } flex flex-col fixed text-center py-3 top-0 left-0 z-10 bg-[#909090] bg-opacity-99 text-white w-full h-screen md:hidden`}
       >
-        {menu.length > 0 &&
-          menu.map((item, index) => (
+        {menuMobile.length > 0 &&
+          menuMobile.map((item, index) => (
             <NavLink
               onClick={() => setShow(false)}
               className={({ isActive }) =>
@@ -84,7 +118,7 @@ const Navbar = () => {
               }
               to={item.to}
               key={index}
-              style={{ padding: "8px", fontSize: "20px" }}
+              style={{ padding: "12px", fontSize: "25px" }}
             >
               {item.title}
             </NavLink>
